@@ -11,8 +11,8 @@ soup = BeautifulSoup(response.text, "html.parser")
 yellow_taxi_links = soup.find_all("a", title="Yellow Taxi Trip Records")
 
 # Create the 'data' folder if it doesn't exist
-if not os.path.exists("data"):
-    os.makedirs("data")
+if not os.path.exists("../data"):
+    os.makedirs("../data")
 
 for link in yellow_taxi_links:
     file_url = link["href"]
