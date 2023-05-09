@@ -14,9 +14,36 @@ One of the major challenges in this problem is scaling the computations to handl
 
 ## Setup
 
+Install Python dependencies (includes Jupyter Notebook, PySpark, and Dask)
 ```bash
 mkdir .venv && python3 -m venv .venv
 python3 -m pip install -r requirements.txt
+```
+
+References
+- [Installation - PySpark](https://spark.apache.org/docs/latest/api/python/getting_started/install.html)
+- [Dask Installation - Dask Documentation](https://docs.dask.org/en/stable/install.html)
+- [Project Jupyter - Installing Jupyter](https://jupyter.org/install)
+
+Install MongoDB
+```bash
+brew tap mongodb/brew
+brew update
+brew install mongodb-community@4.2
+```
+
+Read [Install MongoDB Community Edition on macOS - MongoDB Manual](https://www.mongodb.com/docs/v4.2/tutorial/install-mongodb-on-os-x/)
+
+## Usage
+
+Jupyter Notebook
+```bash
+jupyter notebook
+```
+
+MongoDB
+```bash
+brew services start mongodb-community@4.2
 ```
 
 ## Dataset
@@ -25,11 +52,10 @@ python3 -m pip install -r requirements.txt
     ```bash
     python3 download-yellow-taxi-data.py
     ```
+This script downloads the NYC Yellow Taxi data available from January 2009 to now and stores it in the `data` directory.
 
 ## Technologies
 
-* [Docker](https://www.docker.com/)
-* [Docker Compose](https://docs.docker.com/compose/)
 * [Python](https://www.python.org/)
 * [Jupyter Notebook](https://jupyter.org/)
 * [MongoDB](https://www.mongodb.com/)
