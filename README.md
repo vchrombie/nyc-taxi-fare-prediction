@@ -54,6 +54,7 @@ brew services start mongodb-community@4.2
 
 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 ```bash
+cd code
 python3 download-yellow-taxi-data.py
 ```
 This script downloads the NYC Yellow Taxi data available from January 2009 to now and stores it in the `data` directory.
